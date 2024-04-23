@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KategoriaController;
 use App\Http\Controllers\TesztController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,4 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get("/teszt", [TesztController::class, "teszt"]);
-Route::get("/kat", [TesztController::class, "kat"]);
+Route::get("/kat", [KategoriaController::class, "kat"]);
